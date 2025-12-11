@@ -18,74 +18,60 @@ public class Ejercicio06 {
      */
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        String[] arreglo1 = new String[3];
-        arreglo1[0] = "Café tradicional";
-        arreglo1[1] = "Café francés";
-        arreglo1[2] = "Café alemán";
+        String[] cafe = {"Café tradicional", "Café francés", "Café alemán"};
 
-        double[] arreglo2 = new double[3];
-        arreglo2[0] = 1.5;
-        arreglo2[1] = 2.1;
-        arreglo2[2] = 2.3;
+        double[] arreglo2 = {1.5, 2.1, 2.3};
 
         String mensaje = "";
         boolean bandera = true;
         double sumaf = 0;
-        
-                
-       
 
         while (bandera) {
-            System.out.println("Ingrese el café a comprar , 1 = Café tradicional,"
-                    + " 2 = Café francés, 3 = Café alemán");
+            System.out.println("Ingrese el café a comprar , 0 = Café tradicional,"
+                    + " 1 = Café francés, 2 = Café alemán");
             int i = entrada.nextInt();
             System.out.println("Ingrese el número de tazas a comprar");
             int tazas = entrada.nextInt();
 
-            if (i == 1) {
+            if (i == 0) {
                 double precio = arreglo2[i];
                 double valor_total = tazas * precio;
                 sumaf += valor_total;
-                mensaje = String.format("%sCafé tradicional (%s t), valor a cancelar %.2f\n\t",
-                        mensaje, tazas, valor_total);
+                mensaje = String.format("%s %s (%s t), valor a cancelar %.2f\n\t",
+                        mensaje, cafe[i], tazas, valor_total);
             } else {
-                if (i == 2) {
+                if (i == 1) {
                     double precio = arreglo2[i];
                     double valor_total = tazas * precio;
                     sumaf += valor_total;
-                    mensaje = String.format("%sCafé francés (%s t), valor a cancelar %.2f\n\t",
-                            mensaje, tazas, valor_total);
+                    mensaje = String.format("%s %s (%s t), valor a cancelar %.2f\n\t",
+                            mensaje, cafe[i], tazas, valor_total);
 
                 } else {
-                    if (i == 3) {
+                    if (i == 2) {
                         double precio = arreglo2[i];
                         double valor_total = tazas * precio;
                         sumaf += valor_total;
-                        mensaje = String.format("%sCafé alemán (%s t), valor a cancelar %.2f\n\t",
-                                mensaje, tazas, valor_total);
+                        mensaje = String.format("%s %s (%s t), valor a cancelar %.2f\n\t",
+                                mensaje, cafe[i], tazas, valor_total);
 
                     }
-                    
+
                 }
 
             }
-            
-            
             entrada.nextLine();
             System.out.println("Desea ingresar más valores? (si/no)");
             String salida = entrada.nextLine();
-            
-            
-            if (salida.equals("no")){
+
+            if (salida.equals("no")) {
                 bandera = false;
-                
+
             }
 
         }
         System.out.printf("El usuario ha comprado\n\t%s\nTotal a pagar: %.1f\n", mensaje,
                 sumaf);
-               
 
     }
-
 }

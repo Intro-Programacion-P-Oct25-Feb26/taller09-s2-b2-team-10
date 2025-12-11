@@ -1,7 +1,7 @@
 package paquete01;
+
 import java.util.Scanner;
 
-<<<<<<< HEAD
 import java.util.Scanner;
 
 /**
@@ -9,30 +9,7 @@ import java.util.Scanner;
  * @author reroes
  */
 public class Ejercicio {
-    public static void main(String[] args) {
-        
-        
-        System.out.println("Ingrese el número de marcas");
-        String[] arreglo1 = new 
-        for (int i = 0; i < arreglo1.length; i++ ){
-            String marca = arreglo1[i];
-            String inicial = marca.substring(0,1);
-            switch(marca){
-                case "A":
-                case "C":
-                case "T":
-                    arreglo1[i] = "Inválido";
-                    break;
-                    System.out.printf("Marcas de autos: %s\n", marca);
-                
-            }
-            
-        }
-    }
-    
-    
-=======
-public class Ejercicio {
+
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
@@ -58,7 +35,7 @@ public class Ejercicio {
                     break;
                 default:
                     marcas[cantidad] = marca;
-                    cantidad= cantidad + 1;
+                    cantidad = cantidad + 1;
                     break;
             }
 
@@ -78,5 +55,5 @@ public class Ejercicio {
 
         System.out.println(mensaje);
     }
->>>>>>> 86a6cec597827e6a18c50ec47c9666d09b298945
+
 }

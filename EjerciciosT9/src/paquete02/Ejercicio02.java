@@ -21,6 +21,7 @@ public class Ejercicio02 {
         String[] rangos = {"1-5", "6-10", "11-15", "16-20"};
         
         int[] valoresRangos = new int[4]; // {0, 0, 0, 0, 0}
+        int [] fuera_de_rango = new int [4];
         int respuesta;
 
         for (int i = 0; i < respuestas.length; i++) {
