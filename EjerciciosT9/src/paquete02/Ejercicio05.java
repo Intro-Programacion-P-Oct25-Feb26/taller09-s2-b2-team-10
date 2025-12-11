@@ -29,7 +29,7 @@ public class Ejercicio05 {
             System.out.println("Ingrese las ventas");
             ventasDia = entrada.nextInt();
             ventas[i] = ventasDia;
-            mensaje = String.format("%s%s $%s\n", mensaje, dias[i], ventas[i]);
+            mensaje = String.format("%s-%s $%s\n", mensaje, dias[i], ventas[i]);
       
         }
         System.out.println(mensaje);
