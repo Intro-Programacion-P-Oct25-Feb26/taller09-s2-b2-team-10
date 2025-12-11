@@ -33,31 +33,12 @@ public class Ejercicio06 {
             System.out.println("Ingrese el número de tazas a comprar");
             int tazas = entrada.nextInt();
 
-            if (i == 0) {
+            if (i == 0 || i == 1 || i == 2) {
                 double precio = arreglo2[i];
                 double valor_total = tazas * precio;
                 sumaf += valor_total;
                 mensaje = String.format("%s %s (%s t), valor a cancelar %.2f\n\t",
                         mensaje, cafe[i], tazas, valor_total);
-            } else {
-                if (i == 1) {
-                    double precio = arreglo2[i];
-                    double valor_total = tazas * precio;
-                    sumaf += valor_total;
-                    mensaje = String.format("%s %s (%s t), valor a cancelar %.2f\n\t",
-                            mensaje, cafe[i], tazas, valor_total);
-
-                } else {
-                    if (i == 2) {
-                        double precio = arreglo2[i];
-                        double valor_total = tazas * precio;
-                        sumaf += valor_total;
-                        mensaje = String.format("%s %s (%s t), valor a cancelar %.2f\n\t",
-                                mensaje, cafe[i], tazas, valor_total);
-
-                    }
-
-                }
 
             }
             entrada.nextLine();
@@ -72,6 +53,5 @@ public class Ejercicio06 {
         }
         System.out.printf("El usuario ha comprado\n\t%s\nTotal a pagar: %.1f\n", mensaje,
                 sumaf);
-
     }
 }

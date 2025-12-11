@@ -1,8 +1,10 @@
 package paquete01;
 
-import java.util.Scanner;
 
 import java.util.Scanner;
+
+
+
 
 /**
  *
@@ -11,6 +13,7 @@ import java.util.Scanner;
 public class Ejercicio {
 
     public static void main(String[] args) {
+
         Scanner entrada = new Scanner(System.in);
 
         int cantidad = 0;
@@ -23,6 +26,7 @@ public class Ejercicio {
         while (salida) {
             System.out.println("Ingrese la marca del vehículo");
             marca = entrada.nextLine();
+           
 
             String letra = marca.substring(0, 1).toLowerCase();
 
@@ -57,3 +61,4 @@ public class Ejercicio {
     }
 
 }
+
