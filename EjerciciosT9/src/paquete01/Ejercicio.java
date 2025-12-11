@@ -22,6 +22,7 @@ public class Ejercicio {
         while (salida) {
             System.out.println("Ingrese la marca del vehículo");
             marca = entrada.nextLine();
+           
 
             String letra = marca.substring(0, 1).toLowerCase();
 

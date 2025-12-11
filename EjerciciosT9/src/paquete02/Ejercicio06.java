@@ -43,14 +43,14 @@ public class Ejercicio06 {
             int tazas = entrada.nextInt();
 
             if (i == 1) {
-                double precio = arreglo2[i];
+                double precio = arreglo2[i-1];
                 double valor_total = tazas * precio;
                 sumaf += valor_total;
                 mensaje = String.format("%sCafé tradicional (%s t), valor a cancelar %.2f\n\t",
                         mensaje, tazas, valor_total);
             } else {
                 if (i == 2) {
-                    double precio = arreglo2[i];
+                    double precio = arreglo2[i-1];
                     double valor_total = tazas * precio;
                     sumaf += valor_total;
                     mensaje = String.format("%sCafé francés (%s t), valor a cancelar %.2f\n\t",
@@ -58,7 +58,7 @@ public class Ejercicio06 {
 
                 } else {
                     if (i == 3) {
-                        double precio = arreglo2[i];
+                        double precio = arreglo2[i-1];
                         double valor_total = tazas * precio;
                         sumaf += valor_total;
                         mensaje = String.format("%sCafé alemán (%s t), valor a cancelar %.2f\n\t",
